@@ -1,0 +1,53 @@
+header{
+    box-shadow: 0 2px 5px #dbdbdb;
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 15px;
+    margin-bottom: 2%;
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: row;
+}
+
+.wrapper span{
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.wrapper button {
+    border-radius: 4px;
+    border-width: 1px;
+    font-size: 0.6rem;
+    font-weight: 700;
+    margin: 0.35rem 0.2rem 0.7rem 1;
+    padding: 0.075rem 0.3rem;
+    background-color: var(--global-primary-color);
+    border-color: var(--global-primary-color);
+    color: white;
+}
+
+.wrapper a:hover{
+    color: var(--global-primary-color);
+    font-weight: bold;
+}
+
+.wrapper div:hover {
+    color: var(--global-primary-color);
+}
+
+header > img {
+    width: 90px;
+}
+
+header > div {
+    cursor: pointer;
+}
+
+
+@media (min-width: 1200px){
+    header>img{
+        width: 140px;
+    }
+}

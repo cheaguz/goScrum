@@ -1,0 +1,16 @@
+.container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.container a {
+    text-decoration: none;
+    margin-left: 35%;
+ }
+
+ .container a:hover{
+    color : var(--global-primary-color)
+ }
