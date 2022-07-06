@@ -2,6 +2,7 @@
   "name": "react2",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://cheaguz.github.io/alkemy-go-scrum",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -17,6 +18,7 @@
     "axios": "^0.27.2",
     "formik": "^2.2.9",
     "framer-motion": "^6.3.16",
+    "gh-pages": "^4.0.0",
     "lodash.debounce": "^4.0.8",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
