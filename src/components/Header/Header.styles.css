@@ -1,9 +1,13 @@
 header{
-    box-shadow: 0 2px 5px #dbdbdb;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.25);
     display: flex;
     justify-content: space-between;
-    padding: 12px 15px;
+    padding: 10px 14px 5px;
     margin-bottom: 2%;
+}
+header > img {
+    width: 82px;
+    height: 17px;  
 }
 
 .wrapper{
@@ -17,37 +21,42 @@ header{
 }
 
 .wrapper button {
-    border-radius: 4px;
+    cursor: pointer;
+    transition:all .2s ease-in-out;
+    border-radius: var(--global-radius);
     border-width: 1px;
-    font-size: 0.6rem;
+    font-size: 0.9rem;
     font-weight: 700;
-    margin: 0.35rem 0.2rem 0.7rem 1;
-    padding: 0.075rem 0.3rem;
+    margin-bottom: 2%;
     background-color: var(--global-primary-color);
     border-color: var(--global-primary-color);
-    color: white;
+    color: var(--global-bg-color-soft);;
+    width: 70px;
 }
 
-.wrapper a:hover{
+.wrapper button:hover{
+    background-color: var(--global-bg-color-soft);
     color: var(--global-primary-color);
     font-weight: bold;
+}
+
+.wrapper > div {
+    cursor: pointer;
 }
 
 .wrapper div:hover {
     color: var(--global-primary-color);
 }
 
-header > img {
-    width: 90px;
-}
 
-header > div {
-    cursor: pointer;
-}
-
-
-@media (min-width: 1200px){
-    header>img{
-        width: 140px;
+@media screen and (max-width: 500px){
+    .wrapper span{
+        font-size: 13px;
+    }
+    .wrapper button {
+        border-radius: var(--global-radius);
+        font-size: 0.7rem;
+        margin-bottom: 5%;
+        width: 50px;
     }
 }

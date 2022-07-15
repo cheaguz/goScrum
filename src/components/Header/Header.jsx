@@ -8,6 +8,7 @@ import LogoutIcon from '@mui/icons-material/Logout';
 export const Header = () => {
 const navigate = useNavigate();
 const user = sessionStorage.getItem('user')
+const createdTasks = 3;
 
 
     const handleLogout = () => {
@@ -24,8 +25,9 @@ const user = sessionStorage.getItem('user')
     <header>
         <img src='img/goscrum.png' alt='logo' />
           <div className='wrapper'>
-            <a onClick={redirectToDonate}> Donar</a>        
-            <span>Hola {user}</span>
+            <button><a onClick={redirectToDonate}> Donar</a> </button>      
+            <span>Tareas creadas : {createdTasks}</span>  
+            <span>{user}</span>
             <div onClick={handleLogout}>
               <Tooltip title='Cerrar sesion'>
                 <LogoutIcon />
