@@ -1,6 +1,4 @@
 const API_HOST = import.meta.env.VITE_API_HOST;
-import axios from 'axios';
-
 
 export const newTask = ({ title, status, importance, description }) => {
     return fetch(`${API_HOST}/task/`, {
