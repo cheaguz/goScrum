@@ -16,6 +16,7 @@ export const newTask = ({ title, status, importance, description }) => {
             },
         }),
     })
+    .then(response => response.json())
 };
 
 export const getFormData = () => {
