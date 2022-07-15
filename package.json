@@ -7,20 +7,27 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
+    "test": "jest --watchAll",
     "predeploy": "npm run build",
-    "deploy" : "gh-pages -d dist"
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "@babel/preset-env": "^7.18.6",
+    "@babel/preset-react": "^7.18.6",
     "@emotion/react": "^11.9.3",
     "@emotion/styled": "^11.9.3",
     "@mui/icons-material": "^5.8.4",
     "@mui/material": "^5.8.7",
     "@redux-devtools/extension": "^3.2.2",
     "@reduxjs/toolkit": "^1.8.3",
+    "@types/jest": "^28.1.5",
     "axios": "^0.27.2",
+    "babel-jest": "^28.1.3",
     "formik": "^2.2.9",
     "framer-motion": "^6.3.16",
     "gh-pages": "^4.0.0",
+    "jest": "^28.1.3",
+    "jest-environment-jsdom": "^28.1.3",
     "lodash.debounce": "^4.0.8",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
@@ -32,6 +39,7 @@
     "redux-thunk": "^2.4.1",
     "sweetalert2": "^11.4.20",
     "uuid": "^8.3.2",
+    "whatwg-fetch": "^3.6.2",
     "yup": "^0.32.11"
   },
   "devDependencies": {
