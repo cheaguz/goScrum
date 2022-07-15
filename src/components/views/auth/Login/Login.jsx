@@ -2,7 +2,7 @@ import React from 'react'
 import '../Auth.styles.css'
 import { useFormik } from 'formik';
 import { useNavigate, Link } from 'react-router-dom';
-import { swal } from '../../../../utils/swal';
+import  swalAlert  from '../../../../utils/swal';
 import { login } from '../../../../api/userServices'
 
 
@@ -32,7 +32,11 @@ const onSubmit = () => {
           sessionStorage.setItem('user' , data.result.user.userName)
           navigate("/", { replace: true }) 
         }else{
-          swal() 
+          swalAlert({
+            title: "Credenciales invalidas",
+            text: "Por favor introduzca credenciales validas",
+            icon: 'error'
+          }) 
         }
         
       })
