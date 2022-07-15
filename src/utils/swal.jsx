@@ -1,12 +1,16 @@
 import Swal from 'sweetalert2'
 
-export const swal = () => {
+ const swalAlert = ({title,text,icon}) => {
+
     return  Swal.fire({
-        title : "Credenciales invalidas",
-        text : "Por favor introduzca credenciales validas",
+        title :  title ,
+        text :  text ,
+        icon :  icon ,
         confirmButtonText : "Aceptar",
         width : "400px",
         timer : 10000,
         timerProgressBar : true,
       })
-}
+};
+
+export default swalAlert
