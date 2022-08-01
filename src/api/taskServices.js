@@ -65,4 +65,16 @@ export const editTask = (data) => {
         })
     })
         .then(response => response.json())
-}
+};
+
+
+export const tasksMe = () => {
+    return fetch(`${API_HOST}/task/me`, {
+        method: "GET",
+        headers: {
+            "Content-Type": "application/json",
+            "Authorization": `Bearer ${sessionStorage.getItem('token')}`,
+        },
+    })
+        .then(response => response.json())
+};

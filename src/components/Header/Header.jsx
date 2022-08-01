@@ -1,15 +1,22 @@
-import React from 'react'
+import React , {useEffect , useState} from 'react'
 import './Header.styles.css'
 import { useNavigate } from 'react-router-dom';
 import { Tooltip } from '@mui/material'
 import LogoutIcon from '@mui/icons-material/Logout';
-
+import { tasksMe } from '../../api/taskServices'
 
 export const Header = () => {
+  const [data ,setData] = useState();
 const navigate = useNavigate();
 const user = sessionStorage.getItem('user')
-const createdTasks = 3;
+const createdTasks = data?.length;
 
+//pasar a redux
+useEffect( ()=> {
+  tasksMe()
+  .then(res => setData(res.result) )
+  .catch(err => console.log(err))
+},[])
 
     const handleLogout = () => {
         sessionStorage.removeItem('token');

@@ -12,6 +12,7 @@ import debounce from 'lodash.debounce';
 import { useSelector,useDispatch } from 'react-redux'
 import { getTasks,deleteTask, editTaskStatus } from '../../../store/actions/taskActions';
 
+
 export const Tasks = () => {
   const [list , setList] = useState();
   const [renderList , setRenderList] = useState();
@@ -87,8 +88,8 @@ const conditionalRender = (type) => {
   return (
     <>
     <Header />
-    <TaskForm />
       <main id='tasks'>
+      <TaskForm />
         <section className='wrapper_list'>
           <div className='list_header'>
             <h2>Mis tareas</h2>
@@ -121,6 +122,7 @@ const conditionalRender = (type) => {
               ) )}
             </select>
           </div>
+          
           {isPhone ?
           
             <div className='list phone'>
@@ -150,6 +152,7 @@ const conditionalRender = (type) => {
             </div>
 
           }
+          
         </section>
       </main>
     </>
