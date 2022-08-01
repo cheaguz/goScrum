@@ -1,0 +1,1 @@
+import{j as e,a as n,L as r}from"./index.375c463a.js";const t=()=>e("div",{className:"container",children:n("div",{className:"frame",children:["Pagina no encontrada",e("div",{children:e(r,{to:"/",children:" Home "})})]})});export{t as default};
